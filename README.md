@@ -94,7 +94,7 @@ volumes:
     driver: local
 ```   
 
-Para iniciar los contenedores debe ejecutar el comando:
+Para iniciar los contenedores debe ejecutar el comando desde terminal en el directorio **nova-containers**. 
 
 ```
 $ docker-compose up
