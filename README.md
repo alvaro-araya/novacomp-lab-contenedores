@@ -186,7 +186,7 @@ user
 
 ## APLICACION EN SPRING-BOOT
 
-Iniciar con start.spring.io y descargar la versión de Maven
+Iniciar con **https://start.spring.io** y descargar el proyecto:
 
 ```
 Group:				cr.aao.keycloak
