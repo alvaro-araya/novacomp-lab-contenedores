@@ -1,6 +1,6 @@
 # NOVACOMP
 ## LABORATORIO CONTENEDORES Y MICROSERVICIOS
-#### Creado por Álvaro Araya O.<br/>aarayao [at]  novacompcr.com<br/>2020-05-20
+#### Creado por Álvaro Araya O.<br/>aarayao [at]  novacompcr.com<br/>2020-05-02
 
 ## DESCRIPCIÓN
 
