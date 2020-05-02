@@ -24,7 +24,7 @@ Crear el archivo de configuración de **docker-compose.yml** en un folder llamad
 
 Código:
 	
-```
+```yaml
 # Creado por Alvaro Araya 2020-05-02
 # Novacomp 2020
 # Revisión 1.0
@@ -238,9 +238,9 @@ Agregar en la sección de **dependencies** en el archivo **pom.xml**
 </dependency>
 ```
 
-Agregar /src/main/resources/static los siguientes archivos:
+Agregar en **/src/main/resources/static** los siguientes archivos:
 
-Archivo: index.html
+Archivo: **index.html**
 
 ```html
 <!DOCTYPE html>
@@ -255,7 +255,7 @@ Archivo: index.html
 </html>
 ```
 
-Archivo: home.html
+Archivo: **home.html**
 
 ```html
 <!DOCTYPE html>
@@ -271,7 +271,7 @@ Archivo: home.html
 </html>
 ```
 
-Archivo /admin/index.html
+Archivo **/admin/index.html**
 
 ```html
 <!DOCTYPE html>
@@ -288,7 +288,7 @@ Archivo /admin/index.html
 
 Crear los siguientes clases de Java:
 
-Clase: KeycloakConfig
+Clase: **KeycloakConfig**
 
 ```java
 package cr.aao.keycloak.client;
@@ -307,7 +307,7 @@ public class KeycloakConfig {
 }
 ```
 
-Clase: SecurityConfig
+Clase: **SecurityConfig**
 
 ```java
 package cr.aao.keycloak.client;
@@ -363,7 +363,7 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
 }
 ```
 
-Clase: IndexController
+Clase: **IndexController**
 
 ```java
 package cr.aao.keycloak.client.controller;
@@ -400,7 +400,7 @@ public class IndexController {
 
 Agregar los datos al **application.properties** en **/src/main/resources**
 
-```text
+```properties
 keycloak.realm=novacomp
 keycloak.resource=novaweb
 keycloak.auth-server-url=http://localhost:9090/auth
