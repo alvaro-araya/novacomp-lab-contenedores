@@ -1,6 +1,12 @@
 # LABORATORIO CONTENEDORES Y MICROSERVICIOS NOVACOMP
 #### Creado por Álvaro Araya O.<br/>aarayao [at]  novacompcr.com<br/>2020-05-20
 
+## DESCRIPCIÓN
+
+Este laboratorio realiza la implementación de una aplicación web basada en Spring Boot / Java, con seguridad provista por un servidor de autenticación por medio de un microservicio, incorpora un servidor Postgres, una aplicación de administración de Postgres pgAdmin, y el servidor Keycloak por medio de contenedores.
+
+![Arquitectura de la aplicación](https://github.com/alvaro-araya/novacomp-lab-contenedores/blob/master/arquitectura.png?raw=true)
+
 ## PREPARACIÓN DEL AMBIENTE
 
 Requisitos:
