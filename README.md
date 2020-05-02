@@ -9,6 +9,8 @@ Requisitos:
 
 1. Debe instalar [Docker Desktop](https://www.docker.com/products/docker-desktop)
 2. Debe instalar **docker-compose** siguiendo las instrucciones correspondientes a su sistema operativo [Install Docker Compose](https://docs.docker.com/compose/install/)
+3. Debe contar con Java versión 11 [Instalar Java](https://adoptopenjdk.net)
+4. Debe contar con Maven [Instalar Maven](https://maven.apache.org)
 
 ## ARCHIVO DOCKER COMPOSE
 
@@ -184,13 +186,14 @@ user
 
 ## APLICACION EN SPRING-BOOT
 
-Iniciar con start.spring.io
+Iniciar con start.spring.io y descargar la versión de Maven
 
 ```
 Group:				cr.aao.keycloak
 Artifact:			client
 Java Version:			11
 Description:			Lab Keycloak y Contenedores Novacomp
+Tipo Proyecto:		Maven
 ```
 
 Agregar al proyecto
@@ -198,7 +201,7 @@ Agregar al proyecto
 1. Spring Web
 1. Spring Security
 
-Agregar en una sección nueva de **dependencyManagement**
+Agregar en una sección nueva de **dependencyManagement** en el archivo **pom.xml**
 
 ```xml
 <dependencyManagement>
@@ -213,7 +216,7 @@ Agregar en una sección nueva de **dependencyManagement**
 </dependencyManagement>
 ```
 
-Agregar en la sección de **dependencies**
+Agregar en la sección de **dependencies** en el archivo **pom.xml**
 
 ```xml
 <!-- DEPENDENCIAS KEYCLOAK -->
