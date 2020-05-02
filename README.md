@@ -409,7 +409,7 @@ keycloak.public-client=true
 	```text
 	URL:				http://localhost:8080
 	Usuario:			usuario@novacompcr.com
-	Clave:				temporal123. ** debe cambiar la clave **
+	Clave:				temporal123  **debe cambiar la clave**
 	```
 2.	Trata de ingresar a la sección de Administración.
 3. Agregar el Rol de admin para el usuario: **usuario@novacompcr.com**.
