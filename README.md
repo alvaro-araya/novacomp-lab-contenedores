@@ -9,14 +9,14 @@ Este laboratorio realiza la implementación de una aplicación web basada en Spr
 
 ## PREPARACIÓN DEL AMBIENTE
 
-Requisitos:
-
 #### Requisitos:
 
 1. Debe instalar [Docker Desktop](https://www.docker.com/products/docker-desktop)
 2. Debe instalar **docker-compose** siguiendo las instrucciones correspondientes a su sistema operativo [Install Docker Compose](https://docs.docker.com/compose/install/)
 3. Debe contar con Java versión 11 [Instalar Java](https://adoptopenjdk.net)
 4. Debe contar con Maven [Instalar Maven](https://maven.apache.org)
+
+** Preferible desarrollar el laboratorio en un ambiente Linux o macOS
 
 ## ARCHIVO DOCKER COMPOSE
 
