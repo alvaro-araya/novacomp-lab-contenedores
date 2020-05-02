@@ -28,9 +28,9 @@ Código:
 # Creado por Alvaro Araya 2020-05-02
 # Novacomp 2020
 # Revisión 1.0
-	
+
 version: '3.7'
-	
+
 services:
 	
   ## POSTGRESQL ##
@@ -48,7 +48,7 @@ services:
     networks:
       - nova-net
     restart: always
-	
+
   ## PGADMIN ##
   pgadmin:
     container_name: pgadmin4_container_nova
@@ -65,7 +65,7 @@ services:
     restart: always
     depends_on:
       - postgres
-	
+
   ## KEYCLOAK ##
   keycloak:
     container_name: keycloak_container_nova
@@ -88,11 +88,11 @@ services:
     restart: always
     depends_on:
       - pgadmin
-	
+
 networks:
   nova-net:
     driver: bridge
-	
+
 volumes:
   postgres-data:
     driver: local
