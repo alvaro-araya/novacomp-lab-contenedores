@@ -1,0 +1,72 @@
+# Creado por Alvaro Araya 2020-04-20
+# Novacomp 2020
+# Revisión 1.0
+version: '3.7'
+
+services:
+
+  ## POSTGRESQL ##
+  postgres:
+    container_name: postgres_container_nova
+    image: postgres
+    environment:
+      POSTGRES_USER: nova_root
+      POSTGRES_PASSWORD: pwd_Werar7Oic4
+      POSTGRES_DB: novadb
+    ports:
+      - "5432:5432"
+    volumes:
+      - 'postgres-data:/var/lib/postgresql/data/'
+    networks:
+      - nova-net
+    restart: always
+
+  ## PGADMIN ##
+  pgadmin:
+    container_name: pgadmin4_container_nova
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-usuario@novacompcr.com}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-Werar7Oic4}
+    volumes:
+      - 'pgadmin-data:/root/.pgadmin'
+    ports:
+      - "5454:80"
+    networks:
+      - nova-net
+    restart: always
+    depends_on:
+      - postgres
+
+  ## KEYCLOAK ##
+  keycloak:
+    container_name: keycloak_container_nova
+    image: quay.io/keycloak/keycloak:latest
+    environment:
+      DB_VENDOR: postgres
+      DB_ADDR: postgres_container_nova
+      DB_PORT: 5432
+      DB_DATABASE: novadb
+      DB_SCHEMA: public
+      DB_USER: nova_root
+      DB_PASSWORD: pwd_Werar7Oic4
+      KEYCLOAK_USER: kc_admin
+      KEYCLOAK_PASSWORD: kc_Werar7Oic4
+      # JDBC_PARAMS: "ssl=true"
+    ports:
+      - '9090:8080'
+    networks:
+      - nova-net
+    restart: always
+    depends_on:
+      - pgadmin
+
+networks:
+  nova-net:
+    driver: bridge
+
+volumes:
+  postgres-data:
+    driver: local
+  pgadmin-data:
+    driver: local
